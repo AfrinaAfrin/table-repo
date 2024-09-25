@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cards that Fade</title>
+    <style>
+        /* Basic styling for the body and container */
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            display: flex;
+            gap: 20px;
+        }
+
+        /* Styling for individual cards with different colors */
+        .card {
+            width: 150px;
+            height: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+            transition: opacity 0.3s ease;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .card1 { background-color: lightblue; }
+        .card2 { background-color: lightcoral; }
+        .card3 { background-color: lightgreen; }
+        .card4 { background-color: lightgoldenrodyellow; }
+
+        /* Hover effect: when one card is hovered, other cards fade */
+        .card:hover ~ .card:not(:hover) {
+            opacity: 0.3;
+        }
+
+        .card:hover {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card card1">Card 1</div>
+        <div class="card card2">Card 2</div>
+        <div class="card card3">Card 3</div>
+        <div class="card card4">Card 4</div>
+    </div>
+</body>
+</html>
